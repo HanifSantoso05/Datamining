@@ -389,18 +389,27 @@ title="Print to PDF"
                 
   <section id="k-nn-iris-dataset">
 <h1><strong>K-NN IRIS DATASET</strong><a class="headerlink" href="#k-nn-iris-dataset" title="Permalink to this headline">#</a></h1>
+<p>Algoritma k-Nearest Neighbor adalah algoritma supervised
+learning dimana hasil dari instance yang baru diklasifikasikan berdasarkan mayoritas dari kategori k-tetangga terdekat.</p>
+<p>Tujuan dari algoritma ini adalah untuk mengklasifikasikan obyek baru berdasarkan atribut dan sample-sample dari training data.</p>
+<p>Algoritma k-Nearest Neighbor menggunakan Neighborhood Classification sebagai nilai prediksi dari nilai instance yang baru. Adapun cara kerja dari algoritma K-NN yaitu :</p>
+<ol class="simple">
+<li><p>Tentukan jumlah tetangga yg akan dilakukan perhitungkan (k), misalnya kita tentukan 3 tetangga terdekat (k = 3).</p></li>
+<li><p>hitung jarak setiap tetangga terhadap rumah tersebut, lalu urutkan hasilnya berdasarkan jarak, mulai dari yang terkecil ke yang terbesar.</p></li>
+<li><p>ambil 3 (k) tetangga yg paling dekat, lalu tentukan kelas dari data baru tersebut sesuai dengan tetangga terdekatnya.</p></li>
+</ol>
+<p>Melakukan import iris dataset dari module dataset sklearn</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Import the load_iris function from datsets module</span>
-<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Membuat Variable untuk mendefinisikan data iris</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create bunch object containing iris dataset and its attributes.</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -417,10 +426,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Menampilkan data iris kedalam bentuk array</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Print the iris data</span>
-<span class="n">iris</span><span class="o">.</span><span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">iris</span><span class="o">.</span><span class="n">data</span>
 </pre></div>
 </div>
 </div>
@@ -579,10 +588,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Menampilkan ke 4 atribut yang terdapat pada dataset iris</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Names of 4 features (column names)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -592,6 +601,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Menampilkan bilangan integer yang mewakili spesies pada data iris yang terdiri dari 0 = setosa, 1 = versicolor, 2 = virginica</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Integers representing the species: 0 = setosa, 1=versicolor, 2=virginica</span>
@@ -609,10 +619,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Menampilkan ke tiga nama spesies pada data iris</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3 classes of target</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">target_names</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -636,10 +646,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Menampilkan 150 baris data dan juga 4 kolom atribut yang dimiliki pada data iris</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we have a total of 150 observations and 4 features</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">iris</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -649,6 +659,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Melakukan pendefinisian variable x dan y</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Feature matrix in a object named X</span>
@@ -673,6 +684,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Menganmbil data latih dan data uji</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># splitting the data into training and test sets (80:20)</span>
@@ -712,15 +724,26 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Melkukan Import library KNeighborsClassifier dari sklearn</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import the KNeighborsClassifier class from sklearn</span>
-<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
-
-<span class="c1">#import metrics model to check the accuracy </span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
-<span class="c1">#Try running from k=1 through 25 and record testing accuracy</span>
-<span class="n">k_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KNeighborsClassifier</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Melakukan import model matriks untuk mengecek tingkat keakuratannya</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Melakukan percobaan untuk jalankan dari k = 1 hingga 25 dan catat akurasi pengujian</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">)</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">scores_list</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">k_range</span><span class="p">:</span>
@@ -733,10 +756,10 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Testing accuracy for each value of K</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Testing accuracy for each value of K</span>
-<span class="n">scores</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span>
 </pre></div>
 </div>
 </div>
@@ -770,12 +793,12 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>plot the relationship between K and the testing accuracy</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1">#plot the relationship between K and the testing accuracy</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k_range</span><span class="p">,</span><span class="n">scores_list</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Value of K for KNN&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Testing Accuracy&#39;</span><span class="p">)</span>
@@ -786,7 +809,7 @@ title="Print to PDF"
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Testing Accuracy&#39;)
 </pre></div>
 </div>
-<img alt="_images/TUGAS-3_17_1.png" src="_images/TUGAS-3_17_1.png" />
+<img alt="_images/TUGAS-3_35_1.png" src="_images/TUGAS-3_35_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -802,6 +825,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+<p>Melakukan percobaan untuk mencari spesies yang di sesuaikan dengan data baru yang telah di inputkan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#0 = setosa, 1=versicolor, 2=virginica</span>
@@ -810,17 +834,19 @@ title="Print to PDF"
 <span class="c1">#Making prediction on some unseen data </span>
 <span class="c1">#predict for the below two random observations</span>
 <span class="n">x_new</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">5.1</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">4.9</span><span class="p">,</span> <span class="mf">3.</span> <span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]]</span>
+       <span class="p">[</span><span class="mf">4.9</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],[</span><span class="mf">5.9</span><span class="p">,</span> <span class="mf">3.0</span> <span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">]]</span>
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x_new</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">0</span><span class="p">]]])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x_new</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">1</span><span class="p">]]])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x_new</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">2</span><span class="p">]]])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>setosa
-setosa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5.1, 3.5, 1.4, 0.2], &#39;setosa&#39;]
+[[4.9, 3.0, 1.4, 0.2], &#39;setosa&#39;]
+[[5.9, 3.0, 5.1, 1.8], &#39;virginica&#39;]
 </pre></div>
 </div>
 </div>
