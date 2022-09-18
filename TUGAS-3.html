@@ -835,20 +835,17 @@ learning dimana hasil dari instance yang baru diklasifikasikan berdasarkan mayor
 
 <span class="c1">#Making prediction on some unseen data </span>
 <span class="c1">#predict for the below two random observations</span>
-<span class="n">x_new</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">5.1</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>
-       <span class="p">[</span><span class="mf">4.9</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],[</span><span class="mf">5.9</span><span class="p">,</span> <span class="mf">3.0</span> <span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">]]</span>
+<span class="n">x_new</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
 <span class="n">y_predict</span> <span class="o">=</span> <span class="n">knn</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_new</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">([</span><span class="n">x_new</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">0</span><span class="p">]]])</span>
 <span class="nb">print</span><span class="p">([</span><span class="n">x_new</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">1</span><span class="p">]]])</span>
-<span class="nb">print</span><span class="p">([</span><span class="n">x_new</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">classes</span><span class="p">[</span><span class="n">y_predict</span><span class="p">[</span><span class="mi">2</span><span class="p">]]])</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[5.1, 3.5, 1.4, 0.2], &#39;setosa&#39;]
-[[4.9, 3.0, 1.4, 0.2], &#39;setosa&#39;]
-[[5.9, 3.0, 5.1, 1.8], &#39;virginica&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[3, 4, 5, 2], &#39;versicolor&#39;]
+[[5, 4, 2, 2], &#39;setosa&#39;]
 </pre></div>
 </div>
 </div>
