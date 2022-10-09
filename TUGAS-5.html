@@ -472,7 +472,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-45839012-e154-4142-916b-9ee1019e78b3">
+  <div id="df-49e3e937-d5d6-44eb-803a-76fd7eca29bd">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -592,7 +592,7 @@ title="Print to PDF"
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-45839012-e154-4142-916b-9ee1019e78b3')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-49e3e937-d5d6-44eb-803a-76fd7eca29bd')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -643,12 +643,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-45839012-e154-4142-916b-9ee1019e78b3 button.colab-df-convert');
+          document.querySelector('#df-49e3e937-d5d6-44eb-803a-76fd7eca29bd button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-45839012-e154-4142-916b-9ee1019e78b3');
+          const element = document.querySelector('#df-49e3e937-d5d6-44eb-803a-76fd7eca29bd');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -697,71 +697,19 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+
 <span class="c1"># Number of clusters</span>
 <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="c1"># Fitting the input data</span>
 <span class="n">kmeans</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<ul class="simple">
-<li><p>Menampilkan labels yang di gunakan</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Getting the cluster labels</span>
+<span class="c1"># Getting the cluster labels</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">labels</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-       1, 1, 1, 1, 1, 1, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
-       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 0, 0, 0, 0, 2, 0, 0, 0,
-       0, 0, 0, 2, 2, 0, 0, 0, 0, 2, 0, 2, 0, 2, 0, 0, 2, 2, 0, 0, 0, 0,
-       0, 2, 0, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 2], dtype=int32)
-</pre></div>
-</div>
-</div>
-</div>
-<ul class="simple">
-<li><p>Menampilkan Hasil Centroids</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Centroid values</span>
+<span class="c1"># Centroid values</span>
 <span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">centroids</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[6.85      , 3.07368421, 5.74210526, 2.07105263],
-       [5.006     , 3.418     , 1.464     , 0.244     ],
-       [5.9016129 , 2.7483871 , 4.39354839, 1.43387097]])
-</pre></div>
-</div>
-</div>
-</div>
-<ul class="simple">
-<li><p>Visualisasi Hasil Clustering</p></li>
-</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Visualising the clusters</span>
@@ -778,10 +726,10 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f298c80a8d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f399f5fb6d0&gt;
 </pre></div>
 </div>
-<img alt="_images/TUGAS-5_18_1.png" src="_images/TUGAS-5_18_1.png" />
+<img alt="_images/TUGAS-5_11_1.png" src="_images/TUGAS-5_11_1.png" />
 </div>
 </div>
 <ul class="simple">
@@ -802,11 +750,11 @@ title="Print to PDF"
 
     Iris-setosa       0.00      0.00      0.00        50
 Iris-versicolor       0.00      0.00      0.00        50
- Iris-virginica       0.23      0.28      0.25        50
+ Iris-virginica       0.95      0.72      0.82        50
 
-       accuracy                           0.09       150
-      macro avg       0.08      0.09      0.08       150
-   weighted avg       0.08      0.09      0.08       150
+       accuracy                           0.24       150
+      macro avg       0.32      0.24      0.27       150
+   weighted avg       0.32      0.24      0.27       150
 </pre></div>
 </div>
 </div>
