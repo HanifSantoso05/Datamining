@@ -584,7 +584,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-49341491-35f4-4fda-a494-69fc8714bba4">
+  <div id="df-ff67fbab-0ebf-4337-b559-f1b174620102">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -685,7 +685,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-49341491-35f4-4fda-a494-69fc8714bba4')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ff67fbab-0ebf-4337-b559-f1b174620102')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -736,12 +736,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-49341491-35f4-4fda-a494-69fc8714bba4 button.colab-df-convert');
+          document.querySelector('#df-ff67fbab-0ebf-4337-b559-f1b174620102 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-49341491-35f4-4fda-a494-69fc8714bba4');
+          const element = document.querySelector('#df-ff67fbab-0ebf-4337-b559-f1b174620102');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -806,7 +806,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bd399c7c-682f-4540-bea8-f50220fcc740">
+  <div id="df-2fa58811-3f42-4135-8792-24acdabbfdb0">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -901,7 +901,7 @@ title="Print to PDF"
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bd399c7c-682f-4540-bea8-f50220fcc740')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2fa58811-3f42-4135-8792-24acdabbfdb0')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -952,12 +952,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bd399c7c-682f-4540-bea8-f50220fcc740 button.colab-df-convert');
+          document.querySelector('#df-2fa58811-3f42-4135-8792-24acdabbfdb0 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bd399c7c-682f-4540-bea8-f50220fcc740');
+          const element = document.querySelector('#df-2fa58811-3f42-4135-8792-24acdabbfdb0');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1071,12 +1071,14 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check accuracy of our model on the test data</span>
-<span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score data latih  :&quot;</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score data uji     :&quot;</span><span class="p">,</span> <span class="n">knn</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score data latih  : 0.6521739130434783
+Score data uji     : 0.5
 </pre></div>
 </div>
 </div>
@@ -1092,7 +1094,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0ef847d6-b422-46ba-b390-b338a81920f6">
+  <div id="df-3e9df8b7-df1e-4341-ac5b-06fdf4339184">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1272,7 +1274,7 @@ title="Print to PDF"
 </table>
 <p>116 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0ef847d6-b422-46ba-b390-b338a81920f6')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3e9df8b7-df1e-4341-ac5b-06fdf4339184')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1323,12 +1325,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0ef847d6-b422-46ba-b390-b338a81920f6 button.colab-df-convert');
+          document.querySelector('#df-3e9df8b7-df1e-4341-ac5b-06fdf4339184 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0ef847d6-b422-46ba-b390-b338a81920f6');
+          const element = document.querySelector('#df-3e9df8b7-df1e-4341-ac5b-06fdf4339184');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1452,7 +1454,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2c1e171d-f90d-4689-b4fe-6a1c6d5c0d0d">
+  <div id="df-1db74750-33bf-4766-b9a0-6e5facff788c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1632,7 +1634,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </table>
 <p>115 rows × 10 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-2c1e171d-f90d-4689-b4fe-6a1c6d5c0d0d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1db74750-33bf-4766-b9a0-6e5facff788c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1683,12 +1685,12 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 
       <script>
         const buttonEl =
-          document.querySelector('#df-2c1e171d-f90d-4689-b4fe-6a1c6d5c0d0d button.colab-df-convert');
+          document.querySelector('#df-1db74750-33bf-4766-b9a0-6e5facff788c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-2c1e171d-f90d-4689-b4fe-6a1c6d5c0d0d');
+          const element = document.querySelector('#df-1db74750-33bf-4766-b9a0-6e5facff788c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1719,7 +1721,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-48a06d16-1438-4988-bc4e-675fef90c7eb">
+  <div id="df-55c3f512-055f-4f2f-ae9a-c3d31955c234">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1814,7 +1816,7 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-48a06d16-1438-4988-bc4e-675fef90c7eb')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-55c3f512-055f-4f2f-ae9a-c3d31955c234')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1865,12 +1867,12 @@ menggunakan internal decision making logic. Hal ini tidak terdapat dapat pada je
 
       <script>
         const buttonEl =
-          document.querySelector('#df-48a06d16-1438-4988-bc4e-675fef90c7eb button.colab-df-convert');
+          document.querySelector('#df-55c3f512-055f-4f2f-ae9a-c3d31955c234 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-48a06d16-1438-4988-bc4e-675fef90c7eb');
+          const element = document.querySelector('#df-55c3f512-055f-4f2f-ae9a-c3d31955c234');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1929,7 +1931,7 @@ Name: Classification, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-0320d638-60b6-46f4-b0ea-d497608d34cc">
+  <div id="df-60443229-eb7d-4b40-b4c2-3333249ea3d3">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2097,7 +2099,7 @@ Name: Classification, dtype: int64
 </table>
 <p>87 rows × 9 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-0320d638-60b6-46f4-b0ea-d497608d34cc')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-60443229-eb7d-4b40-b4c2-3333249ea3d3')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2148,12 +2150,12 @@ Name: Classification, dtype: int64
 
       <script>
         const buttonEl =
-          document.querySelector('#df-0320d638-60b6-46f4-b0ea-d497608d34cc button.colab-df-convert');
+          document.querySelector('#df-60443229-eb7d-4b40-b4c2-3333249ea3d3 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-0320d638-60b6-46f4-b0ea-d497608d34cc');
+          const element = document.querySelector('#df-60443229-eb7d-4b40-b4c2-3333249ea3d3');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2191,20 +2193,14 @@ Name: Classification, dtype: int64
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score data latih :&quot;</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Score data uji   :&quot;</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
-
-           1       0.80      0.62      0.70        13
-           2       0.74      0.88      0.80        16
-
-    accuracy                           0.76        29
-   macro avg       0.77      0.75      0.75        29
-weighted avg       0.77      0.76      0.75        29
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Score data latih : 1.0
+Score data uji   : 0.7931034482758621
 </pre></div>
 </div>
 </div>
